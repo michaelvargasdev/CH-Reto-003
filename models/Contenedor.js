@@ -4,23 +4,9 @@ const UUID = require("uuidjs")
 class Contenedor {
     constructor(fileName) {
         this.fileName = fileName
+        this.config = { encoding: 'utf-8' }
     }
 
-    static config = { encoding: 'utf-8' }
-    static id = 0
-
-    async generateId() {
-        try {
-            //Obteneniendo el mayo id, esta es la que mas tiempo toma
-            const list = await this.readFile()
-            const lastObject = list.sort((a, b) => b.id - a.id)[0]
-            return lastObject ? lastObject.id+1 : 1
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    
-    
     async readFile() {
         try {
             if (fs.existsSync(this.fileName)) {
