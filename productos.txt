@@ -1,0 +1,1 @@
+[{"title":"Laptop DELL","price":1600,"thumbnail":"https://compusystemperu.com/wp-content/uploads/2021/03/G5-15-1.jpg","id":"e5a6669a-1d5d-4242-9902-a0e79790aed4"}]
